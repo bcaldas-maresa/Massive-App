@@ -52,11 +52,11 @@ st.caption("Incluye: Forecast con objetivos, Cohortes, NPTB, Campañas & What-if
 # ---------------- DATA LOAD ----------------
 @st.cache_data
 def load_data():
-    customers = pd.read_csv("data/customers.csv", parse_dates=["acquisition_date"])
-    products  = pd.read_csv("data/products.csv")
-    campaigns = pd.read_csv("data/campaigns.csv", parse_dates=["start_date","end_date"])
-    tx        = pd.read_csv("data/transactions.csv", parse_dates=["date"])
-    events    = pd.read_csv("data/web_events.csv", parse_dates=["date"])
+    customers = pd.read_csv("customers.csv", parse_dates=["acquisition_date"])
+    products  = pd.read_csv("products.csv")
+    campaigns = pd.read_csv("campaigns.csv", parse_dates=["start_date","end_date"])
+    tx        = pd.read_csv("transactions.csv", parse_dates=["date"])
+    events    = pd.read_csv("web_events.csv", parse_dates=["date"])
     try:
         nps = pd.read_csv("data/nps_surveys.csv", parse_dates=["date"])
     except Exception:
